@@ -1,0 +1,17 @@
+version: '1.1'
+services:
+mongon:
+image: mongo:5.0.3
+ports:
+- 27017:27017
+enviroment:
+MONGO_INTITD_ROOT_USERNAME: robertwillis
+MONGO_INITDB_ROOT_PASSWORD: robertwillis
+mongo-express: 
+ports: 
+- 8081:8081
+environment:
+ME_CONFIG_MONGO_INTITD_ROOT_USERNAME: robertwillis
+ME_MONGO_INTITD_ROOT_USERNAME: robertwillis
+ME_CONFIG_MONGODB_URL: mongo://robertwillis:robertwillis@mongo:27017/
+   
